@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Pat Allan"]
-  s.date = %q{2010-02-16}
+  s.date = %q{2010-04-19}
   s.description = %q{A concise and easy-to-use Ruby library that connects ActiveRecord to the Sphinx search daemon, managing configuration, indexing and searching.}
   s.email = %q{pat@freelancing-gods.com}
   s.extra_rdoc_files = [
@@ -70,7 +70,7 @@ http://freelancing-god.github.com/ts/en/upgrading.html
 }
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.4}
   s.summary = %q{ActiveRecord/Rails Sphinx library}
   s.test_files = [
     "features/abstract_inheritance.feature",
@@ -105,7 +105,6 @@ http://freelancing-god.github.com/ts/en/upgrading.html
      "features/sti_searching.feature",
      "features/support",
      "features/support/database.example.yml",
-     "features/support/database.yml",
      "features/support/db",
      "features/support/db/fixtures",
      "features/support/db/fixtures/alphas.rb",

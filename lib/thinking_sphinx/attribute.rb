@@ -73,6 +73,7 @@ module ThinkingSphinx
       @type           = options[:type]
       @query_source   = options[:source]
       @crc            = options[:crc]
+			@multi_type			= options[:multi_type]
       
       @type         ||= :multi    unless @query_source.nil?
       if @type == :string && @crc
@@ -171,6 +172,14 @@ module ThinkingSphinx
         base_type
       end
     end
+
+		def translate_type
+			if type == :multi 
+				@multi_type ? @multi_type : !all_ints?
+			else
+				type
+			end
+		end
     
     def updatable?
       [:integer, :datetime, :boolean].include?(type) && !is_string?

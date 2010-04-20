@@ -40,14 +40,12 @@ module ThinkingSphinx
     
     def self.translate?(property)
       return true if property.is_a?(Field)
-      
-      case property.type
+			
+      case property.translate_type
       when :string
         true
       when :integer, :boolean, :datetime, :float
         false
-      when :multi
-        !property.all_ints?
       end
     end
     
